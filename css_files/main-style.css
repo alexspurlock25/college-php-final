@@ -1,0 +1,393 @@
+/*
+
+  cite:
+        https://techwelkin.com/align-div-center-of-screen-vertically-cross-browser
+
+*/
+* {
+    box-sizing: border-box;
+}
+header, main, nav, footer, section, article, figure, figcaption,
+aside {
+    display: block;
+}
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#wrapper {
+    max-width: 85%;
+    margin: 0 auto;
+    min-height:100%;
+    position:relative;
+    height:100%;
+}
+.outer {
+  display: table;
+  position: absolute;
+  margin: 0 auto;
+  border: 0;
+  padding:0;
+  height: 99%;
+  width: 99%;
+}
+.middle {
+  display: table-cell;
+  margin: 0 auto;
+  padding: 0;
+  vertical-align: middle;
+}
+/* start left screen */
+.login-page-form-container {
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 30px;
+  width: 1000px;
+  height: 550px;
+  margin: 0 auto;
+}
+.left-half-login {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  float: left;
+  align-self: center;
+}
+.left-half-login div {
+  text-align: center;
+  align-self: center;
+}
+.left-half-login h1 {
+  font-size: 5em;
+  font-family: arial, helvetica, sans-serif;
+}
+.left-half-login p {
+  font-size: 1.3em;
+}
+/* end left screen */
+
+/* start right screen */
+.right-half-login {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  float: right;
+  align-self: center;
+}
+.right-half-login div {
+  text-align: center;
+  align-self: center;
+  padding: 1em;
+}
+.right-half-login input {
+  padding-left: 1em;
+  height: 3em;
+  min-width: 20em;
+  max-width: 30em;
+  margin: .5em .5em;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.right-half-login ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+.right-half-login ul li {
+    font-family: Arial, sans-serif;
+    color: black;
+    padding: 0;
+    margin: 1.2em 6em;
+    border-radius: 2em;
+    box-shadow: 0 0 2px .1px #000000;
+}
+.right-half-login ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 1em 4em;
+    color: black;
+}
+/* end right screen */
+/* end login page */
+
+
+/*  START register page*/
+.register-page {
+  background-image: url("/images/website-background/dot-grid.png");
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+/* END register page */
+
+ /*START home*/
+
+body {
+    background-image: url("/images/website-background/edited_background.jpg");
+    margin:0;
+    padding:0;
+    height:100%;
+}
+header {
+    background-color: #3D9970;
+    position: fixed;
+    opacity: 0.90;
+    width: 100%;
+    margin: 0 auto;
+    height: 4.3em;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 10px 0;
+}
+.header-div {
+    margin: 0 auto;
+    color: white;
+    max-width: 54em;
+    height: 4.3em;
+    top: 0;
+}
+.header-div h1 {
+    margin: .3em 0;
+    font-size: 2.3em;
+    float: left;
+    max-width: 55%;
+}
+
+/*
+start nav
+ */
+.mobile-nav-container {
+    display: none;
+}
+.hello-name {
+
+}
+.desktop-nav-parent {
+    float: right;
+}
+.desktop-nav-parent ul {
+    /*background-image: url("../images/website-background-1.png");*/
+    border-radius: 10px;
+    padding: 0;
+}
+.desktop-nav-parent ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+.desktop-nav-parent a {
+    text-decoration: none;
+    border-radius: 10px;
+    color: black;
+    display: block;
+    padding: .5em;
+}
+.desktop-nav-parent a:hover {
+    background-color: #CCCCCC;
+}
+
+#main {
+    max-width: 65%;
+    margin: 0 auto;
+    margin-top: 10em;
+}
+.box-container {
+    min-height: 22em;
+}
+.first-box {
+    background-color: pink;
+    float: left;
+    width: 38%;
+    margin: 0 auto;
+}
+.second-box {
+    background-color: grey;
+    width: 38%;
+    float: right;
+    margin: 0 auto;
+}
+/* START ADD / DELETE BUTTONS*/
+
+.buttons {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.buttons a {
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 1em 2em;
+    color: black;
+    display: block;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.buttons li {
+    width: 200px;
+    margin: 1em auto;
+    color: black;
+    padding: 0;
+    border-radius: 7px;
+}
+.button::after {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.button:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 2px 2px darkgrey;
+}
+.button:hover::after {
+    opacity: 1;
+}
+
+
+.recipe-box {
+    margin: 0 auto;
+    max-width: 350px;
+    display: inline-grid;
+
+}
+.home-fieldset {
+    width: inherit;
+    margin: 1em;
+    border-radius: 10px;
+    border-style: none;
+}
+.home-fieldset label:first-of-type{
+    font-size: 1.4em;
+}
+
+/* END ADD / DELETE BUTTONS*/
+
+/*END home page*/
+/* START signout.php*/
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+header {
+    background-color: #3D9970;
+    position: fixed;
+    opacity: 0.90;
+    width: 100%;
+    margin: 0 auto;
+    height: 4.3em;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 10px 0;
+}
+.header-div {
+    margin: 0 auto;
+    color: white;
+    max-width: 54em;
+    height: 4.3em;
+    top: 0;
+}
+.header-div h1 {
+    margin: .3em 0;
+    font-size: 2.3em;
+    float: left;
+    max-width: 55%;
+}
+
+/*
+start nav
+ */
+.mobile-nav-container {
+    display: none;
+}
+.desktop-nav-parent {
+    float: right;
+}
+.desktop-nav-parent ul {
+    background-image: url("images/website-background-1.png");
+    border-radius: 10px;
+    padding: 0;
+}
+.desktop-nav-parent ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+.desktop-nav-parent a {
+    text-decoration: none;
+    border-radius: 10px;
+    color: black;
+    display: block;
+    padding: .5em;
+}
+.desktop-nav-parent a:hover {
+    background-color: #CCCCCC;
+}
+
+#main {
+    margin: 0 auto;
+    margin-top: 10em;
+}
+.box-container {
+    width: inherit;
+    margin: 0 auto;
+    overflow:hidden;
+    display:inline-block;
+    text-align:center;
+}
+.first-box {
+    background-color: pink;
+    float: left;
+    width: 38%;
+    margin: 0 auto;
+}
+.second-box {
+    background-color: grey;
+    width: 38%;
+    float: right;
+    margin: 0 auto;
+}
+
+
+/* END signout.php*/
+
+
+/* START edit_entry.php*/
+
+.recipe-container {
+    padding: 2em;
+    margin: 100px auto;
+}
+.recipe-input-container {
+    display: block;
+    text-align: center;
+}
+.recipe-input-container input {
+    text-align: center;
+    padding-left: 1em;
+    height: 2.8em;
+    min-width: 15em;
+    max-width: 20em;
+    margin: .5em .5em;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.recipe-input-container input:last-child {
+    margin-top: 0;
+    background-color: #3D9970;
+    margin-bottom: 1.9em;
+}
+.recipe-input-container input:hover, textarea:hover {
+    box-shadow: 0 0 2px .1px black;
+}
+
+/* END edit_entry.php*/
+footer{
+    position: fixed;
+    background-color: aquamarine;
+    color: black;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    text-align: center;
+}
